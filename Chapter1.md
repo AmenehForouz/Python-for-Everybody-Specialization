@@ -33,4 +33,27 @@ a program is like a sequence of stored instructions. And the idea is that the co
 Guido van Rossum, over 20 years ago, invented this Python language
 Python was not named for a snake even though we use the snake motif all the time. It turns out that what Python was named for was Monty Python's Flying Circus. And the reason was is that Guido was trying to capture an air of play. Most programming languages in the 80s when Python started were very, very serious, and very complex and you had to be really serious to figure them out, a lot of math geniuses. And Guido thought, I could probably write a programming language that wouldn't be that hard, would be fun actually, would be enjoyable to use, but let's not make it bad. Let's not make it weak, let's make it both powerful and enjoyable.
 
-  
+1.4 Writing paragraphs of code
+assignment statement is something that often confuses people when they move from math to programming. An equal sign sort of has a direction to it; it's an arrow. It really is saying "Dear Python, you've got a lot of memory - you've got a lot of memory. Take a little tiny piece of that memory and remember it and name it x. I might use that - I'm going to use that later - and stick a 1 in it." So this is sort of like stick 1 in a spare place in memory and name it x. print (x) says, go take whatever that spare bit of memory was and bring it back out and tell me what I put in it.
+
+reserved words: Now, what do we mean by reserved words? Well, these are words that if we use these words, we must use them to mean the thing that Python expects them to mean. Another way to put that is we can't use them elsewhere. We can't make up a variable named import. We can't make a variable named assert; because if Python sees assert, it means something very specific to Python. If it sees if, it means something. 
+
+Sentences are lines. And so when we write a program, we're writing a text file and we put a line and another line and another line. Each one of these is like a separate line and we've got to get them right. And then we construct a paragraph out of a series of lines. 
+
+scripts are stored sets of instruction in text files that you can then hand to Python to run them
+Scripts is a series of steps. Now there are a couple of basic patterns that we use and we compose them. 
+The most basic pattern is what's called **sequential**. We do one thing, then we do the next thing, then we do the next thing. 
+**Conditional** is sort of intelligent where you're doing something and then may or may not be doing something.you have this "if". If this is true, do this statement; if it's false, do some other statement. Those are called conditional steps 
+when we have a series of steps that need to be **repeated**. while and for loop using iterative variables.
+And then the fourth pattern is the **store and retrieve** pattern, 
+
+
+Quiz:
+When Python is running in the interactive mode and displaying the chevron prompt (>>>) - what question is Python asking you?
+- What Python script would you like me to run? 
+
+What is the proper way to say “good-bye” to Python? - quit()
+
+What is the best way to think about a "Syntax Error" while programming?
+- The computer did not understand the statement that you entered
+
