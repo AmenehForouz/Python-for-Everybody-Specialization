@@ -1,6 +1,7 @@
 # Python-for-Everybody-Specialization
 
 ### Course 1: Programming for Everybody (Getting Started with Python)
+- audiobook: https://podcasts.apple.com/us/podcast/python-for-everybody-audio-py4e/id1214665693
 - Chapter 1: Why we program - https://www.py4e.com/html3/01-intro
 - Chapter 2: Variables and Expressions - https://www.py4e.com/html3/02-variables
 - Chapter 3: Conditional Statements - https://www.py4e.com/html3/03-conditional

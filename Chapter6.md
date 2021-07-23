@@ -1,0 +1,247 @@
+## Strings
+
+- string is sequence of characters
+- string literal used quotes 'hello' or "Hello"
+- In strings, + means concatenate
+- when string contains numbers, it is still string
+- we can convert numbers in string into a number using int()
+
+
+**Reading and Converting**
+- we read data using strings using input() and then parse and convert data as we need
+- input numbers must be converted from strings
+
+**Looking inside strings**
+- we can get any single character in string using an index specified in square brackets
+- index value must be an integer and start at zero
+- the index value can be expression that is computed
+- you will get index out of range err if you attempt to index beyond the end of string.
+
+    b | a | n | a | n | a |
+    --- | --- | ---|--- | --- | ---
+    0 | 1 | 2 | 3 | 4 | 5 |
+
+```
+    fruit = 'banana'
+    print(fruit[1]) ....a
+    x = 3
+    print(fruit[x-1]) .... n
+```
+
+**len() function**
+```
+    fruit = 'banana'
+    print(len(fruit)) .... 6
+```
+
+**Looping through strings**
+```
+    fruit = 'banana'
+    i = 0
+    while i < len(fruit):
+        char = fruit[i]
+        print(i,char)
+        i = i+1
+
+    Output:
+    0 b
+    1 a
+    2 n
+    3 a
+    4 n
+    5 a
+```
+**OR**
+```
+    fruit = 'banana'
+    for i in fruit:
+        print(i)
+
+    Output:
+    b
+    a
+    n
+    a
+    n
+    a
+```
+
+**Looping and counting**
+- counting number of a
+
+```
+    cnt = 0
+    fruit = 'banana'
+    for i in fruit:
+        if i == 'a':
+            cnt = cnt+1
+    print(cnt) .... 3
+```
+
+**Looking deeper into 'in'**
+```
+    for letter in 'banana':
+        print(letter)
+```
+- iteration variable: letter
+- String sequence: banana
+- block: print(letter)
+
+- the iterative variable iterates through the sequence
+- the block of code is executed once for each value in the sequence
+- the iterative variable moves through all of the values in the sequence.
+
+**Slicing Strings**
+
+h | e | l | l | o |   | w | o | r | l | d |
+--- | --- | ---|--- | --- | --- | --- | ---|--- | --- | ---
+0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
+
+- to get continuous section of string using colon operator
+- number after colon: **up to but not included**
+- if second number is beyong the end of string, it stops at the end and won't give any error.
+```
+    s = 'hello world'
+    print(s[0:4]) .... hell
+    print(s[6:7]) .... w
+    print(s[6:20]) .... world #don't give err
+    print(s[:2]) .... he
+    print(s[8:]) .... rld
+    print(s[:]) .... hello world
+```
+
+**String Concatenation**
+- when the + operator is applied to strings, it means "concatenation"
+```
+    a = 'hello'
+    b = a + 'there'
+    print(b) .... hellothere
+    c = a + ' '+ 'there'
+    print(c) .... hello there
+```
+
+**using 'n' as a logical operator**
+- the 'in' keyword can also be used to check to see if one string is in another string
+- the 'in' expression is a logical expression that returns **True** or **False** and can be used in an if statement.
+
+```
+    fruit = 'banana'
+    'n' in fruit .... True
+    'm' in fruit .... False
+    'nan' in fruit .... True
+    if 'a' in fruit:
+        print('found it') ....Found it
+```
+
+**String Comparison**
+```
+    word = 'Banana'
+    if word == 'banana':
+        print('all right banana')
+    if word < 'banana':
+        print(word,'is smaller than banana')
+    elif word > 'banana':
+        print(word,'comes is bigger than banana')
+    else:
+        print('All right')
+
+    output:
+    Banana is smaller than banana
+```
+
+**String Library**
+- strings are objects, we can call different functions using obj.func() - str.func()
+- python has number of string functions which are in the string library
+- these functions are already built into every string - we invoke them by appending the function to string variable
+- these functions do not modify the original string, instead they return a new string that has been altered.
+ 
+- **lower()**
+```
+    greet = 'Hello World'
+    s = greet.lower() 
+    print(s) .... hello world
+    print(greet) .... Hello World
+    print('Vidya'.lower()) .... vidya
+```
+
+- **upper()**
+```
+    greet = 'Hello World'
+    s = greet.upper() 
+    print(s) .... HELLO WORLD
+    print(greet)  .... Hello World
+    print('Vidya'.upper()) .... VIDYA
+```
+
+- **type() and dir()**
+```
+    greet = "Hello world"
+    print(type(greet))
+    print(dir(greet))  #gives the list of functions
+
+    output:
+    <class 'str'>
+    ['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', 
+    '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 
+    'index', 'isalnum', 'isalpha', 'isascii', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'removeprefix', 'removesuffix', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+```
+
+- **str.capitalize()**
+
+
+- **str.find()**
+    - to search for substring within string
+    - it finds first occurance of the substring
+    - if substring is not found, find() returns -1
+    - remenber string position starts at zero
+```
+    fruit = 'banana'
+    pos = fruit.find('na')
+    print(pos)
+    a = fruit.find('z')
+    print(a)
+
+    Output:
+    2
+    -1
+ ```
+
+- **replace()**
+    - like a search and replace operation
+    - replaces all occurances of search string with replacement string
+```
+    greet = 'Hello Vidya'
+    nstr = greet.replace('Vidya','Kunal')
+    print(nstr) ....Hello Kunal
+    nstr = greet.replace('y','h')
+    print(nstr) .... Hello Vidha
+```
+
+**Stripping whitespaces**
+- to remove whitespaces at beginning or at end
+- **lstrip()** - remove whitespaces at left
+- **rstrip()** - remove whitespaces at right
+- **strip()** removes both beginning and ending whitespaces.
+
+```
+    greet = '  Hello Vidya   '
+    print(greet.lstrip()) .... 'Hello Vidya   '
+    print(greet.rstrip()) ....'  Hello Vidya'
+    print(greet.strip()) .... 'Hello Vidya'
+```
+
+**prefixes : startwith()**
+```
+    line = 'please have a nice day'
+    line.startwith('please') .... True
+    line.startwith('P') .... False
+```
+
+**Parsing and Extracting**
+```
+    data = 'From vidyasonawane20@gmail.com sat jan 5 09:14:16 2021'
+    atpos = data.find('@')
+    sppos = data.find(' ',atpos)
+    host = data[atpos+1 : sppos]
+    print(host) .... gmail.com
+```
