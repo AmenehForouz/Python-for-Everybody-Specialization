@@ -1,11 +1,11 @@
 # Python-for-Everybody-Specialization
 
 ### Course 1: Programming for Everybody (Getting Started with Python)
-Chapter 1: Why we program
-Chapter 2: Variables and Expressions
-Chapter 3: Conditional Statements
-Chapter 4: Functions
-Chapter 5: Loops and Iteration
+Chapter 1: Why we program - https://www.py4e.com/html3/01-intro
+Chapter 2: Variables and Expressions - https://www.py4e.com/html3/02-variables
+Chapter 3: Conditional Statements - https://www.py4e.com/html3/03-conditional
+Chapter 4: Functions - https://www.py4e.com/html3/04-functions
+Chapter 5: Loops and Iteration - https://www.py4e.com/html3/05-iterations
 
 ### Course 2: Python Data Structures
 Chapter 6: Strings
