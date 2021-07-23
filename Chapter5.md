@@ -1,0 +1,201 @@
+# Loops and Iterations 
+- to do repetative tasks
+- Loops have **iteration variables** that change each time through a loop, often there iteration variables go through a sequence of numbers.
+- indefinite loops - while keyword
+- definite loops - for keyword
+
+**indefinite loops - while keyword**
+
+```
+    n = 5
+    while n > 0:
+        print(n)
+        n = n-1
+    print('Blastoff!')
+    print(n)
+
+    Output: 5   4   3   2   1   Blastoff!   0
+```
+
+**Breaking out of Loop**
+- **Break** statement ends the current loop and jumps to the statement immediately following the loop
+
+```
+    while True:
+        line = input('> ')
+        if line == 'done'
+            break
+        print(line)
+    print('Completed!')
+
+output: if we give input as 'done', it will break and output will be Completed!
+```
+
+**Finishing an Iteration with Continue**
+- **continue** statement ends the current iteration and jumps to the top of the loop and start next iteration.
+- Break jumps out of the loop while continue jumps out of the perticular iteration.
+
+```
+    while True:
+        line = input('> ')
+        if line[0] == '#'
+            continue
+        if line == 'done'
+            break
+        print(line)
+    print('Completed!')
+
+    > hello vidya   ... hello vidya
+    > #welcome      ... # won't print anything
+    > hello kunal   ... hello kunal
+    > done          ... Completed!
+```
+
+**Definite Loops : for and in keyword**
+- definite loops have explicit iteration variables that change each time through a loop.
+
+```
+    for i in [5,4,3,2,1]:
+        ptint(i)
+    print('Blastoff!')
+
+    output: 5   4   3   2   1   Blastoff!
+```
+
+```
+    friends = ['vidya','sharayu','teju']
+    for friend in friends:
+        print('Hey',friend)
+    print('Done!')
+
+    Output: 
+    Hey vidya
+    Hey sharayu
+    Hey teju
+    Done!
+```
+
+**Finding the largest number**
+```
+    l = -1
+    print('before', l)
+    for num in [3,41,12,3,74,15]:
+        if num > l:
+            l = num
+        print(l)
+    print('After:',l)
+        
+    Output:
+    Before -1
+    3
+    41
+    41
+    41
+    74
+    74
+    After: 74
+```
+
+**Counting in loop**
+```
+    cnt = 0
+    print('Before:', cnt)
+    for num in [3,41,12,3,74,15]:
+        cnt = cnt +1
+    print('After:',cnt)
+
+    Output:
+    Before: 0
+    After: 6
+```
+
+**Summing in loop**
+```
+    s = 0
+    print('Before:', s)
+    for num in [3,41,12,3,74,15]:
+        s = s + num
+    print('After:',s)
+
+    Output:
+    Before: 0
+    After: 154
+```
+
+**Finding the average in a loop**
+```
+    s = 0
+    cnt =0 
+    print('Before:', cnt ,s)
+    for num in [3,41,12,3,74,15]:
+        cnt = cnt + 1
+        s = s+num
+    print('After:',cnt,s, s/cnt)
+
+    Output:
+    Before: 0 0
+    After: 6 154 25
+```
+
+**Filtering in the loop**
+```
+    print('Before')
+    for num in [3,41,12,3,74,15]:
+        if num > 20
+            print('Num larger than 20:',num)
+    print('After)
+
+    Output:
+    Before
+    Num larger than 20: 41
+    Num larger than 20: 74
+    After
+```
+
+**Search a number using Boolean variable**
+- search 3 in list, wether it is present or not
+```
+    flag = False
+    print("Before:", flag)
+    for num in [9,41,12,3,74,15]:
+            if num == 3:
+                flag = True
+            print(flag,num)
+    print('After:',flag)
+
+    Output:
+    Before: False
+    False 9
+    False 41
+    False 12
+    True 3
+    True 74
+    True 15
+    After: True
+```
+
+**Find the smallest value**
+```
+    s = None
+    print('Before:', s)
+    for num in [3,41,12,3,74,15]:
+        if s == None:
+            s = num
+        elif num < s:
+            s = num
+    print('After:',s)
+
+    Output:
+    Before: None
+    After: 3
+```
+**we can also use 'is' in place of '=='**
+- eg, if s is None or if s is 3
+- 'is' is stronger equality than '=='
+- best practice is to use it for None, True and False
+
+**None**:
+- The None keyword is used to define a null variable or an object. 
+- In Python, None keyword is an object, and it is a data type of the class NoneType . 
+- We can assign None to any variable, but you can not create other NoneType objects. 
+- Note: All variables that are assigned None point to the same object.
