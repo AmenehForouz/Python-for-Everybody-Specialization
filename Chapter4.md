@@ -1,0 +1,75 @@
+# Functions: store(function definition) and reuse(function call or invoking) pattern
+- functions are reusable pieces of code.
+- function is kind of like a variable, except that it holds code.
+- def keyword for defining the function
+
+```
+def thing():
+    print('hello')
+    print('vidya')
+thing() # Calling/Invoking the function
+```
+**built in functions we use commonly:**
+- print()
+- type()
+- input()
+- float()
+- int()
+- quit()
+- max() # to find largest of something
+- ord('a') # to get the ascii value
+
+**max() built in function**
+```
+big = max('Hello World')
+print(big) .... r
+big = max('hello world')
+print(big) .... w
+```
+note: lowercase variables are bigger than uppercase variables bcoz ascii code of lowercase letters are bigger than uppercase letters
+
+**building our own functions**
+ 
+**Parameter** is a variable which we use in the function definition, It is handle that allows the code in the function to access the arguments for perticular function invocation.
+
+```
+def greet(lang):
+    if lang == 'a':
+        print('hello vidya')
+    elif lang == 'b':
+        print('hello kunal')
+    else:
+        print('welcome all')  
+
+greet('a') .... hello vidya
+greet('b') .... hello kunal
+greet('c') .... welcome all     
+
+```
+- In above code lang is the parameter, which we write in function definition
+- a, b and c are the arguments which we write in () while calling the function.
+
+**Multiple Parameters / Arguments**
+- we can define more than one parameter in the function definition
+- we simply add more arguments when we call function
+- we match the number and order of arguments and parameters
+
+```
+def addtwo(a,b):
+    added = a+b
+    return added
+
+x = addtwo(3,5) # if one of them is string then will give err: cannot concatenate string with int
+print(x) ...8
+```
+
+**Return Values**: 
+- Often a function will take its arguments, do some computation, and return a value to be used as the value of the function call in the calling expression, the return keyword is used for this.
+- return is a keyword (not a function) that exits the function, it can send a value back to main program
+```
+def greet():
+    return "Hello"
+
+print(greet(),"vidya") .... Hello vidya
+print(greet(),"kunal") .... Hello kunal
+```
