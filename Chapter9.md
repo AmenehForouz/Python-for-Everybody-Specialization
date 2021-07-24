@@ -1,0 +1,119 @@
+# Dictionaries
+- list is a linear collection of values that stay in order.
+- Dictionary is bag of values, each with it's own label and unordered.
+- dictionaries have keys while lists have index to access the values.
+- curly brackets, key:value
+- dictionary values are mutable like lists.
+- dictionaries allow us to do fast database-like operations in Python.
+- dictionaries have different names in different languages.
+    - associate arrays: perl/php
+    - properties or map or hashmaps - java
+    - property bag - C#/.Net
+
+```
+    purse = dict()
+    purse['money'] = 12
+    purse['candy'] = 3
+    purse['tissues'] = 75
+    print(purse) .... {'money':12,'tissues':12,'candy':3'}
+    print(purse['candy']) .... 3
+    purse['candy'] = purse['candy'] + 2
+    print(purse['candy']) .... 5
+```
+
+**Dictionary Literals (Constants)**
+- dictionary literals use curly braces and have list if key:value pairs
+- you can make an empty dictionary using empty curly braces
+
+```
+    a = {'vidya':1,'teju':22,'sharayu':34}
+    print(a) .... {'vidya':1,'teju':22,'sharayu':34}
+    b = { }
+    print(b) .... {}
+```
+
+**most common name? - counting the names**
+
+- If we reference a key which is not in dictionary, we will get an error.
+- we can use in operator to see if key is in the dictionary.
+
+```
+    namecnt = dict()
+
+    names = ['vidya','teju','kunal','teju','sharayu','kunal','vidya','kunal']
+
+    for name in names:
+        if name not in namecnt:
+            namecnt[name] = 1
+        else:
+            namecnt[name] = namecnt[name]+1
+
+    print(namecnt)
+
+    output:
+    {'vidya': 2, 'teju': 2, 'kunal': 3, 'sharayu': 1}
+```
+
+**get method for dictionaries**
+- the pattern of checking to see if a key is already in the dictionary and assuming a default value if the key is not there
+- prints default value if key does not exists and no traceback
+
+```
+    x = namecnt.get('kunal', 0)
+    print(x) ... 2
+    x = namecnt.get('vicky', 0)
+    print(x) ... 0
+```
+
+**Simplified counting with get()**
+```
+    namecnt1 = dict()
+    for name in names:
+        namecnt1[name] = namecnt1.get(name,0)+1
+    print(namecnt1)
+
+    output: 
+    {'vidya': 2, 'teju': 2, 'kunal': 3, 'sharayu': 1}
+```
+
+**for loops and Dictionaries**
+- even though dictionaries are not sorted in order, we can write a for loop that goes through all the entries in the dictionary - actually it goes through all the keys in the dictionary and looks up the values.
+
+```
+    d = {'vidya': 2, 'teju': 2, 'kunal': 3, 'sharayu': 1}
+    for k in d:
+        print(k,d[k])
+
+    output:
+    vidya 2
+    teju 2
+    kunal 3
+    sharayu 1
+```
+
+**retriving lists of keys and values**
+- you can get list of keys, values or items(both) from a dictionary.
+- using **keys() , values() and items() methods** respectively.
+```
+    d = {'vidya': 2, 'teju': 2, 'kunal': 3, 'sharayu': 1}
+    print(list(d)) .... ['vidya', 'teju', 'kunal', 'sharayu']
+    print(d.keys()) .... dict_keys(['vidya', 'teju', 'kunal', 'sharayu'])
+    print(d.values()) .... dict_values([2, 2, 3, 1])
+    print(d.items()) ....dict_items([('vidya', 2), ('teju', 2), ('kunal', 3), ('sharayu', 1)]) # list of key value pairs - tuples
+```
+
+**Two iteration variables**
+- we loop through key value pairs in dictionaryusing two iteration variables.
+- each iteration, the first variable is the key and second is the corresponding value for the key.
+
+```
+    d = {'vidya': 2, 'teju': 2, 'kunal': 3, 'sharayu': 1}
+    for k,v in d.items():
+        print(k,v)
+
+    output:
+    vidya 2
+    teju 2
+    kunal 3
+    sharayu 1
+```
