@@ -1,0 +1,106 @@
+# Files
+- a text file can be thought of as a sequence of lines.
+
+**Opening a File**
+- before we can read the contect of file, we must tell python which file we are going to work with and what we will be doing with the file.
+- this is done with open() function
+- open() returns a **file handle**- a variable used to perform operations on file
+
+- handle = open(filename,mode)
+- fhand = open('abc.txt','r')
+- filename is a string
+- mode is optional and should be 'r' if we are planning to read the file and 'w' if we are going to write to file.
+
+```
+    fh = open('7.1.words.txt')
+    print(fh)
+
+    output:
+    <_io.TextIOWrapper name='7.1.words.txt' mode='r' encoding='cp1252'>
+```
+
+**newline character**
+- indicate when line ends
+- we represent it as '\n' in strings
+- newline is one character - not two
+- text file has newline at the end of each line.
+- print() function puts newline at the end
+```
+    greet = 'hello\nworld'
+    print(greet)
+    print(len(greet))
+
+    output:
+    hello
+    world
+    11
+```
+
+**File handle as sequence of lines**
+- file handle open for read can be treated as sequence of strings where each line in file is a string
+- we can use for statement to iterate through a sequence
+- Remember - sequence is an ordered set.
+
+```
+    xfile = open('mbox.txt')
+    for l in xfile:
+        print(l)
+```
+
+**Counting lines in file**
+- open file in read only mode
+- use for loop to read each line
+- count the lines and print out the numbers of lines
+
+```
+    fhand = open('abc.txt')
+    cnt = 0
+    for line in fhand:
+        cnt = cnt+!
+    print(line count:, cnt)
+```
+
+**Reading the whole file using read()**
+- we can read the whole file (newline and all) into a **single string**
+
+```
+    fhand = open('abc.txt')
+    inpstr = fhand.read()
+    print(len(inpstr)) # len() is the built in sunction and not from string library
+```
+
+**Searching through a File**
+- we can use if statement in our for loop to only print lines that meet some criteria
+```
+    fhand = open('abc.txt')
+    for line in fhand:
+        line = line.rstrip() #to remove newline at the end of line, bcoz print also adds newline. 
+        if line.startwith('The'):
+            print(line) 
+```
+    
+**Skipping with continue**
+- using continue and **not**
+```
+    fhand = open('abc.txt')
+    for line in fhand:
+        line = line.rstrip() 
+        if not line.startwith('The'):
+            continue
+        print(line) 
+```
+
+**using 'in' to select lines**
+```
+    fhand = open('abc.txt')
+    for line in fhand:
+        line = line.rstrip() 
+        if not '@gmail.com' in line:
+            continue
+        print(line) 
+```
+
+Quiz:
+1. where are the files stored? - secondary memory
+2. What is stored in a "file handle" that is returned from a successful open() call? - handle is connection to files data.
+3. What Python function would you use if you wanted to prompt the user for a file name to open? - input()
