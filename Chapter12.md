@@ -95,4 +95,7 @@
     - receives up to buffersize bytes from the socket.
     - Unlike send(), the recv() function of Python's socket module can be used to receive data from both TCP and UDP sockets.
     - Returns the received data as bytes object. hence we use decode() function to convert it to bytes.
+- encode() function belongs to str class, str.encode()
+- decode() function belongs to bytes class, bytes.decode()
+
 
