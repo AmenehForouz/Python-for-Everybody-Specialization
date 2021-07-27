@@ -4,7 +4,7 @@
 - built on top of IP (internet protocol)
 - assumes IP might lose some data-stores and retransmits data if it seems to be lost
 - Handles "Flow control" using a transmit window
-- provides a noce reliable pipe
+- provides a nice reliable pipe
 
 **TCP Connections / Sockets**
 - In computer networking, an internet socket or network socket is an endpoint of bidirectional inter-process communication flow across an internet protocol based computer network, such as Internet.
