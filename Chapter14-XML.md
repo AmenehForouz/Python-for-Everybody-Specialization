@@ -10,7 +10,7 @@
 **XML**
 - eXtensible Markup Language
 - primary purpose is to help information systems **share structured data**
-- It started as simplified subset of the SGML- Standat Generalized Markup Language, and is designed to be relatively human-legible.
+- It started as simplified subset of the SGML- Standard Generalized Markup Language, and is designed to be relatively human-legible.
 - whitespaces - we indent only for readability
 - What is a complex element? A complex element is an XML element that have at least one attribute, or at least one sub (child) element.
 - A simple element is an XML element that does not have any attributes or any sub (child) elements. A simple element can be declared with a simple datatype. 
