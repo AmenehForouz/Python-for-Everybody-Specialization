@@ -60,3 +60,14 @@
 
 **API - Application programming Interfaces**
 - to communicate between 2 different applications.
+
+**API Security and Rate Limiting**
+- the compute resources to run these APIs are not free
+- data provided by these APIs is usually valuable
+- data providers might limit the number of requests per day, demand API key, or even charge for usage.
+
+**Authentication vs. Authorization**
+- Authentication confirms that users are who they say they are. Authorization gives those users permission to access a resource.
+- In simple terms, authentication is the process of verifying who a user is, while authorization is the process of verifying what they have access to. 
+- Comparing these processes to a real-world example, when you go through security in an airport, you show your ID to authenticate your identity.
+
